@@ -400,6 +400,108 @@ h3 {
     }
   }
 
+    /* Expanded Tournament Card Styles */
+.tournament-card {
+  cursor: pointer;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.tournament-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem;
+}
+
+.tournament-header {
+  flex: 2;
+}
+
+.tournament-meta {
+  display: flex;
+  gap: 1rem;
+  color: #666;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+}
+
+.toggle-icon {
+  margin-left: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.tournament-details {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1.2rem;
+  transition: all 0.3s ease;
+  background: rgba(255,255,255,0.7);
+}
+
+.tournament-card.active .tournament-details {
+  max-height: 500px;
+  padding: 0 1.2rem 1.2rem;
+}
+
+.tournament-card.active .toggle-icon {
+  transform: rotate(180deg);
+}
+
+.game-results {
+  margin: 1rem 0;
+}
+
+.game-results table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.5rem 0;
+}
+
+.game-results th, .game-results td {
+  padding: 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.game-results .win {
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.game-results .loss {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.tournament-highlights {
+  margin-top: 1.5rem;
+}
+
+.tournament-highlights ul {
+  padding-left: 1.2rem;
+}
+
+.photo-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  color: #8B0000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .tournament-summary {
+    flex-wrap: wrap;
+  }
+  
+  .result-badge {
+    order: 1;
+    margin-top: 0.5rem;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -537,120 +639,116 @@ h3 {
   </div>
 </section>
 
-<section id="tournament-results" class="section">
-  <div class="container">
-    <h3>Tournament Results</h3>
-    
-    <div class="season-selector">
-      <button class="season-btn active" data-season="2025">2024-25 Season</button>
-      <button class="season-btn" data-season="2024">2023-24 Season</button>
-    </div>
-    
-    <div class="tournament-results-container">
-      <!-- 2024-25 Season -->
-      <div class="season-results active" data-season="2025">
-        <div class="tournament-card gold">
-          <div class="tournament-header">
-            <h4>Edwardsville Migration</h4>
-            <div class="tournament-location">Fall 2024 • Edwardsville, IL</div>
-          </div>
-          <div class="result-badge">1st Place</div>
-        </div>
-        
-        <div class="tournament-card silver">
-          <div class="tournament-header">
-            <h4>Bulldog Brawl</h4>
-            <div class="tournament-location">Spring 2025 • Columbus, MS</div>
-          </div>
-          <div class="result-badge">2nd Place</div>
-        </div>
-        
-        <div class="tournament-card">
-          <div class="tournament-header">
-            <h4>Illinois D-I Conferences</h4>
-            <div class="tournament-location">Spring 2025 • Chicago, IL</div>
-          </div>
-          <div class="result-badge">3rd Place</div>
-        </div>
-        
-        <div class="tournament-card">
-          <div class="tournament-header">
-            <h4>Midwest Throwdown</h4>
-            <div class="tournament-location">Spring 2025 • St. Louis, MO</div>
-          </div>
-          <div class="result-badge">4th Place</div>
-        </div>
-        
-        <div class="tournament-card">
-          <div class="tournament-header">
-            <h4>Great Lakes Regionals</h4>
-            <div class="tournament-location">Spring 2025 • Zeeland, MI</div>
-          </div>
-          <div class="result-badge">9th Place</div>
-        </div>
-        
-        <div class="tournament-card upcoming">
-          <div class="tournament-header">
-            <h4>Huck Finn</h4>
-            <div class="tournament-location">Spring 2025 • Edwardsville, IL</div>
-          </div>
-          <div class="result-badge">NA</div>
+<!-- 2024-25 Season -->
+<div class="season-results active" data-season="2025">
+  <!-- Tournament 1 - Expanded version -->
+  <div class="tournament-card gold" onclick="toggleTournamentDetails(this)">
+    <div class="tournament-summary">
+      <div class="tournament-header">
+        <h4>Edwardsville Migration</h4>
+        <div class="tournament-meta">
+          <span class="tournament-date">Oct 12-13, 2024</span>
+          <span class="tournament-location">Edwardsville, IL</span>
         </div>
       </div>
+      <div class="result-badge">1st Place</div>
+      <div class="toggle-icon">▼</div>
+    </div>
+    
+    <div class="tournament-details">
+      <div class="game-results">
+        <h5>Game Results:</h5>
+        <table>
+          <tr>
+            <th>Opponent</th>
+            <th>Score</th>
+            <th>Result</th>
+          </tr>
+          <tr>
+            <td>Missouri</td>
+            <td>15-11</td>
+            <td class="win">W</td>
+          </tr>
+          <tr>
+            <td>Illinois</td>
+            <td>13-9</td>
+            <td class="win">W</td>
+          </tr>
+          <tr>
+            <td>Washington U</td>
+            <td>17-14</td>
+            <td class="win">W</td>
+          </tr>
+        </table>
+      </div>
       
-      <!-- 2023-24 Season -->
-      <div class="season-results" data-season="2024">
-        <div class="tournament-card gold">
-          <div class="tournament-header">
-            <h4>Rolla Round Robin</h4>
-            <div class="tournament-location">Fall 2023 • Rolla, MO</div>
-          </div>
-          <div class="result-badge">2nd Place</div>
-        </div>
-        
-        <div class="tournament-card">
-          <div class="tournament-header">
-            <h4>Dust Bowl</h4>
-            <div class="tournament-location">Spring 2024 • Tulsa, OK</div>
-          </div>
-          <div class="result-badge">4th Place</div>
-        </div>
-        
-        <div class="tournament-card">
-          <div class="tournament-header">
-            <h4>Illinois D-I Conferences</h4>
-            <div class="tournament-location">Spring 2024 • Rantoul, IL</div>
-          </div>
-          <div class="result-badge">5th Place</div>
-        </div>
-        
-        <div class="tournament-card">
-          <div class="tournament-header">
-            <h4>Grand Rapids Invite</h4>
-            <div class="tournament-location">Spring 2024 • Holland, MI</div>
-          </div>
-          <div class="result-badge">5th Place</div>
-        </div>
-        
-        <div class="tournament-card">
-          <div class="tournament-header">
-            <h4>Old Capitol Open</h4>
-            <div class="tournament-location">Spring 2024 • Cedar Rapids, IA</div>
-          </div>
-          <div class="result-badge">6th Place</div>
-        </div>
-        
-        <div class="tournament-card">
-          <div class="tournament-header">
-            <h4>Great Lakes Regionals</h4>
-            <div class="tournament-location">Spring 2024 • Zeeland, MI</div>
-          </div>
-          <div class="result-badge">11th Place</div>
-        </div>
+      <div class="tournament-highlights">
+        <h5>Highlights:</h5>
+        <ul>
+          <li>Undefeated tournament run</li>
+          <li>Jacob Geisen: 18 assists</li>
+          <li>Evan Driscoll: 12 goals</li>
+        </ul>
+        <a href="#" class="photo-link">View Tournament Photos</a>
       </div>
     </div>
   </div>
-</section>
+
+  <!-- Tournament 2 - Bulldog Brawl -->
+  <div class="tournament-card silver" onclick="toggleTournamentDetails(this)">
+    <div class="tournament-summary">
+      <div class="tournament-header">
+        <h4>Bulldog Brawl</h4>
+        <div class="tournament-meta">
+          <span class="tournament-date">Feb 15-16, 2025</span>
+          <span class="tournament-location">Columbus, MS</span>
+        </div>
+      </div>
+      <div class="result-badge">2nd Place</div>
+      <div class="toggle-icon">▼</div>
+    </div>
+    
+    <div class="tournament-details">
+      <div class="game-results">
+        <h5>Game Results:</h5>
+        <table>
+          <tr>
+            <th>Opponent</th>
+            <th>Score</th>
+            <th>Result</th>
+          </tr>
+          <tr>
+            <td>Mississippi State</td>
+            <td>15-12</td>
+            <td class="win">W</td>
+          </tr>
+          <tr>
+            <td>Alabama</td>
+            <td>13-10</td>
+            <td class="win">W</td>
+          </tr>
+          <tr>
+            <td>Ole Miss</td>
+            <td>11-13</td>
+            <td class="loss">L</td>
+          </tr>
+        </table>
+      </div>
+      
+      <div class="tournament-highlights">
+        <h5>Highlights:</h5>
+        <ul>
+          <li>Jonathan Zawitkoski: Tournament MVP</li>
+          <li>Augustino Ojeda: 10 goals</li>
+          <li>Highest spirit score: 9.5/10</li>
+        </ul>
+        <a href="#" class="photo-link">View Tournament Photos</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Continue with other tournaments in same format -->
+</div>
   
   <section id="sponsor" class="section light">
     <div class="container">
@@ -702,6 +800,10 @@ h3 {
       });
     });
   });
+
+function toggleTournamentDetails(card) {
+  card.classList.toggle('active');
+}
     
 </script>
   
