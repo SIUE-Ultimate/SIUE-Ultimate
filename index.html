@@ -167,6 +167,108 @@ h3 {
   width: 100%;
 }
 
+.roster-list {
+    max-width: 800px;
+    margin: 2rem auto 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .player-item {
+    border-bottom: 1px solid #eee;
+  }
+  
+  .player-item:last-child {
+    border-bottom: none;
+  }
+  
+  .player-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(139, 0, 0, 0.05);
+    cursor: pointer;
+  }
+  
+  .player-name {
+    font-weight: 600;
+    flex: 2;
+  }
+  
+  .player-meta {
+    flex: 2;
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  .toggle-bio {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #8B0000;
+    width: 30px;
+    text-align: center;
+  }
+  
+  .player-bio {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .player-item.active .player-bio {
+    max-height: 200px;
+  }
+  
+  .player-item.active .toggle-bio {
+    transform: rotate(45deg);
+  }
+  
+  .bio-content {
+    display: flex;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+  
+  .bio-photo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #8B0000;
+  }
+  
+  .bio-text {
+    flex: 1;
+    font-size: 0.9rem;
+  }
+  
+  .bio-text p {
+    margin: 0 0 0.5rem;
+  }
+  
+  @media (max-width: 600px) {
+    .bio-content {
+      flex-direction: column;
+    }
+    
+    .bio-photo {
+      align-self: center;
+    }
+    
+    .player-header {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    
+    .player-name, .player-meta {
+      flex: 1 0 100%;
+    }
+  }
+
   </style>
 </head>
 <body>
@@ -225,6 +327,49 @@ h3 {
     </div>
   </section>
 
+<section id="roster" class="section">
+  <div class="container">
+    <h3>Meet the Team</h3>
+    <div class="roster-list">
+      <!-- Player 1 -->
+      <div class="player-item">
+        <div class="player-header">
+          <span class="player-name">Jamie Rivera (Captain)</span>
+          <span class="player-meta">Handler • Senior</span>
+          <button class="toggle-bio">+</button>
+        </div>
+        <div class="player-bio">
+          <div class="bio-content">
+            <img src="https://i.imgur.com/KkFp3d5.png" alt="Jamie" class="bio-photo">
+            <div class="bio-text">
+              <p>Computer Science major from Chicago. Throws sick hucks and organizes team bonding.</p>
+              <p><strong>Fun Fact:</strong> Can solve a Rubik's cube in under 30 seconds!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Player 2 -->
+      <div class="player-item">
+        <div class="player-header">
+          <span class="player-name">Taylor Chen</span>
+          <span class="player-meta">Cutter • Junior</span>
+          <button class="toggle-bio">+</button>
+        </div>
+        <div class="player-bio">
+          <div class="bio-content">
+            <img src="https://i.imgur.com/KkFp3d5.png" alt="Taylor" class="bio-photo">
+            <div class="bio-text">
+              <p>Biology major from St. Louis. Our fastest defender with insane layout skills.</p>
+              <p><strong>Fun Fact:</strong> Once ate 15 tacos in one sitting.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
   <section id="sponsor" class="section light">
     <div class="container">
   <h2> Sponsors</h2>
@@ -248,5 +393,16 @@ h3 {
       <p>&copy; 2025 SIUE Ultimate. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+  document.querySelectorAll('.player-header').forEach(header => {
+    header.addEventListener('click', () => {
+      header.parentNode.classList.toggle('active');
+      const btn = header.querySelector('.toggle-bio');
+      btn.textContent = header.parentNode.classList.contains('active') ? '−' : '+';
+    });
+  });
+</script>
+  
 </body>
 </html>
