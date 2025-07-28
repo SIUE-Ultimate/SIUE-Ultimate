@@ -639,116 +639,297 @@ h3 {
   </div>
 </section>
 
-<!-- 2024-25 Season -->
-<div class="season-results active" data-season="2025">
-  <!-- Tournament 1 - Expanded version -->
-  <div class="tournament-card gold" onclick="toggleTournamentDetails(this)">
-    <div class="tournament-summary">
-      <div class="tournament-header">
-        <h4>Edwardsville Migration</h4>
-        <div class="tournament-meta">
-          <span class="tournament-date">Oct 12-13, 2024</span>
-          <span class="tournament-location">Edwardsville, IL</span>
-        </div>
-      </div>
-      <div class="result-badge">1st Place</div>
-      <div class="toggle-icon">▼</div>
+<section id="tournament-results" class="section">
+  <div class="container">
+    <h3>Tournament Results</h3>
+    
+    <div class="season-selector">
+      <button class="season-btn active" data-season="2025">2024-25 Season</button>
+      <button class="season-btn" data-season="2024">2023-24 Season</button>
     </div>
     
-    <div class="tournament-details">
-      <div class="game-results">
-        <h5>Game Results:</h5>
-        <table>
-          <tr>
-            <th>Opponent</th>
-            <th>Score</th>
-            <th>Result</th>
-          </tr>
-          <tr>
-            <td>Missouri</td>
-            <td>15-11</td>
-            <td class="win">W</td>
-          </tr>
-          <tr>
-            <td>Illinois</td>
-            <td>13-9</td>
-            <td class="win">W</td>
-          </tr>
-          <tr>
-            <td>Washington U</td>
-            <td>17-14</td>
-            <td class="win">W</td>
-          </tr>
-        </table>
-      </div>
-      
-      <div class="tournament-highlights">
-        <h5>Highlights:</h5>
-        <ul>
-          <li>Undefeated tournament run</li>
-          <li>Jacob Geisen: 18 assists</li>
-          <li>Evan Driscoll: 12 goals</li>
-        </ul>
-        <a href="#" class="photo-link">View Tournament Photos</a>
-      </div>
-    </div>
-  </div>
+    <div class="tournament-results-container">
+      <!-- 2024-25 Season -->
+      <div class="season-results active" data-season="2025">
+        <!-- Edwardsville Migration -->
+        <div class="tournament-card gold" onclick="toggleTournamentDetails(this)">
+          <div class="tournament-summary">
+            <div class="tournament-header">
+              <h4>Edwardsville Migration</h4>
+              <div class="tournament-meta">
+                <span class="tournament-date">Fall 2024</span>
+                <span class="tournament-location">Edwardsville, IL</span>
+              </div>
+            </div>
+            <div class="result-badge">1st Place</div>
+            <div class="toggle-icon">▼</div>
+          </div>
+          <div class="tournament-details">
+            <div class="game-results">
+              <h5>Game Results:</h5>
+              <p>Complete results not available</p>
+            </div>
+          </div>
+        </div>
 
-  <!-- Tournament 2 - Bulldog Brawl -->
-  <div class="tournament-card silver" onclick="toggleTournamentDetails(this)">
-    <div class="tournament-summary">
-      <div class="tournament-header">
-        <h4>Bulldog Brawl</h4>
-        <div class="tournament-meta">
-          <span class="tournament-date">Feb 15-16, 2025</span>
-          <span class="tournament-location">Columbus, MS</span>
+        <!-- Rolla Round Robin -->
+        <div class="tournament-card silver" onclick="toggleTournamentDetails(this)">
+          <div class="tournament-summary">
+            <div class="tournament-header">
+              <h4>Rolla Round Robin</h4>
+              <div class="tournament-meta">
+                <span class="tournament-date">Fall 2024</span>
+                <span class="tournament-location">Rolla, MO</span>
+              </div>
+            </div>
+            <div class="result-badge">2nd Place</div>
+            <div class="toggle-icon">▼</div>
+          </div>
+          <div class="tournament-details">
+            <div class="game-results">
+              <h5>Game Results:</h5>
+              <p>Complete results not available</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bulldog Brawl -->
+        <div class="tournament-card silver" onclick="toggleTournamentDetails(this)">
+          <div class="tournament-summary">
+            <div class="tournament-header">
+              <h4>Bulldog Brawl</h4>
+              <div class="tournament-meta">
+                <span class="tournament-date">Spring 2025</span>
+                <span class="tournament-location">Columbus, MS</span>
+              </div>
+            </div>
+            <div class="result-badge">2nd Place</div>
+            <div class="toggle-icon">▼</div>
+          </div>
+          <div class="tournament-details">
+            <div class="game-results">
+              <h5>Game Results:</h5>
+              <p>Complete results not available</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Illinois D-I Conferences -->
+        <div class="tournament-card" onclick="toggleTournamentDetails(this)">
+          <div class="tournament-summary">
+            <div class="tournament-header">
+              <h4>Illinois D-I Conferences</h4>
+              <div class="tournament-meta">
+                <span class="tournament-date">Spring 2025</span>
+                <span class="tournament-location">Chicago, IL</span>
+              </div>
+            </div>
+            <div class="result-badge">3rd Place</div>
+            <div class="toggle-icon">▼</div>
+          </div>
+          <div class="tournament-details">
+            <div class="game-results">
+              <h5>Game Results:</h5>
+              <p>Complete results not available</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Midwest Throwdown -->
+        <div class="tournament-card" onclick="toggleTournamentDetails(this)">
+          <div class="tournament-summary">
+            <div class="tournament-header">
+              <h4>Midwest Throwdown</h4>
+              <div class="tournament-meta">
+                <span class="tournament-date">Spring 2025</span>
+                <span class="tournament-location">St. Louis, MO</span>
+              </div>
+            </div>
+            <div class="result-badge">4th Place</div>
+            <div class="toggle-icon">▼</div>
+          </div>
+          <div class="tournament-details">
+            <div class="game-results">
+              <h5>Game Results:</h5>
+              <p>Complete results not available</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Great Lakes Regionals -->
+        <div class="tournament-card" onclick="toggleTournamentDetails(this)">
+          <div class="tournament-summary">
+            <div class="tournament-header">
+              <h4>Great Lakes Regionals</h4>
+              <div class="tournament-meta">
+                <span class="tournament-date">Spring 2025</span>
+                <span class="tournament-location">Zeeland, MI</span>
+              </div>
+            </div>
+            <div class="result-badge">9th Place</div>
+            <div class="toggle-icon">▼</div>
+          </div>
+          <div class="tournament-details">
+            <div class="game-results">
+              <h5>Game Results:</h5>
+              <p>Complete results not available</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Huck Finn -->
+        <div class="tournament-card upcoming" onclick="toggleTournamentDetails(this)">
+          <div class="tournament-summary">
+            <div class="tournament-header">
+              <h4>Huck Finn</h4>
+              <div class="tournament-meta">
+                <span class="tournament-date">Spring 2025</span>
+                <span class="tournament-location">Edwardsville, IL</span>
+              </div>
+            </div>
+            <div class="result-badge">Upcoming</div>
+            <div class="toggle-icon">▼</div>
+          </div>
+          <div class="tournament-details">
+            <div class="game-results">
+              <h5>Game Schedule:</h5>
+              <p>Check back for schedule updates</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="result-badge">2nd Place</div>
-      <div class="toggle-icon">▼</div>
-    </div>
-    
-    <div class="tournament-details">
-      <div class="game-results">
-        <h5>Game Results:</h5>
-        <table>
-          <tr>
-            <th>Opponent</th>
-            <th>Score</th>
-            <th>Result</th>
-          </tr>
-          <tr>
-            <td>Mississippi State</td>
-            <td>15-12</td>
-            <td class="win">W</td>
-          </tr>
-          <tr>
-            <td>Alabama</td>
-            <td>13-10</td>
-            <td class="win">W</td>
-          </tr>
-          <tr>
-            <td>Ole Miss</td>
-            <td>11-13</td>
-            <td class="loss">L</td>
-          </tr>
-        </table>
-      </div>
       
-      <div class="tournament-highlights">
-        <h5>Highlights:</h5>
-        <ul>
-          <li>Jonathan Zawitkoski: Tournament MVP</li>
-          <li>Augustino Ojeda: 10 goals</li>
-          <li>Highest spirit score: 9.5/10</li>
-        </ul>
-        <a href="#" class="photo-link">View Tournament Photos</a>
+      <!-- 2023-24 Season -->
+      <div class="season-results" data-season="2024">
+        <!-- Rolla-Round Robin -->
+        <div class="tournament-card silver" onclick="toggleTournamentDetails(this)">
+          <div class="tournament-summary">
+            <div class="tournament-header">
+              <h4>Rolla-Round Robin</h4>
+              <div class="tournament-meta">
+                <span class="tournament-date">Fall 2023</span>
+                <span class="tournament-location">Rolla, MO</span>
+              </div>
+            </div>
+            <div class="result-badge">2nd Place</div>
+            <div class="toggle-icon">▼</div>
+          </div>
+          <div class="tournament-details">
+            <div class="game-results">
+              <h5>Game Results:</h5>
+              <p>Complete results not available</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dust Bowl -->
+        <div class="tournament-card" onclick="toggleTournamentDetails(this)">
+          <div class="tournament-summary">
+            <div class="tournament-header">
+              <h4>Dust Bowl</h4>
+              <div class="tournament-meta">
+                <span class="tournament-date">Spring 2024</span>
+                <span class="tournament-location">Tulsa, OK</span>
+              </div>
+            </div>
+            <div class="result-badge">4th Place</div>
+            <div class="toggle-icon">▼</div>
+          </div>
+          <div class="tournament-details">
+            <div class="game-results">
+              <h5>Game Results:</h5>
+              <p>Complete results not available</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Illinois D-I Conferences -->
+        <div class="tournament-card" onclick="toggleTournamentDetails(this)">
+          <div class="tournament-summary">
+            <div class="tournament-header">
+              <h4>Illinois D-I Conferences</h4>
+              <div class="tournament-meta">
+                <span class="tournament-date">Spring 2024</span>
+                <span class="tournament-location">Rantoul, IL</span>
+              </div>
+            </div>
+            <div class="result-badge">5th Place</div>
+            <div class="toggle-icon">▼</div>
+          </div>
+          <div class="tournament-details">
+            <div class="game-results">
+              <h5>Game Results:</h5>
+              <p>Complete results not available</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grand Rapids Invite -->
+        <div class="tournament-card" onclick="toggleTournamentDetails(this)">
+          <div class="tournament-summary">
+            <div class="tournament-header">
+              <h4>Grand Rapids Invite</h4>
+              <div class="tournament-meta">
+                <span class="tournament-date">Spring 2024</span>
+                <span class="tournament-location">Holland, MI</span>
+              </div>
+            </div>
+            <div class="result-badge">5th Place</div>
+            <div class="toggle-icon">▼</div>
+          </div>
+          <div class="tournament-details">
+            <div class="game-results">
+              <h5>Game Results:</h5>
+              <p>Complete results not available</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Old Capitol Open -->
+        <div class="tournament-card" onclick="toggleTournamentDetails(this)">
+          <div class="tournament-summary">
+            <div class="tournament-header">
+              <h4>Old Capitol Open</h4>
+              <div class="tournament-meta">
+                <span class="tournament-date">Spring 2024</span>
+                <span class="tournament-location">Cedar Rapids, IA</span>
+              </div>
+            </div>
+            <div class="result-badge">6th Place</div>
+            <div class="toggle-icon">▼</div>
+          </div>
+          <div class="tournament-details">
+            <div class="game-results">
+              <h5>Game Results:</h5>
+              <p>Complete results not available</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Great Lakes Regionals -->
+        <div class="tournament-card" onclick="toggleTournamentDetails(this)">
+          <div class="tournament-summary">
+            <div class="tournament-header">
+              <h4>Great Lakes Regionals</h4>
+              <div class="tournament-meta">
+                <span class="tournament-date">Spring 2024</span>
+                <span class="tournament-location">Zeeland, MI</span>
+              </div>
+            </div>
+            <div class="result-badge">11th Place</div>
+            <div class="toggle-icon">▼</div>
+          </div>
+          <div class="tournament-details">
+            <div class="game-results">
+              <h5>Game Results:</h5>
+              <p>Complete results not available</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  
-  <!-- Continue with other tournaments in same format -->
-</div>
+</section>
   
   <section id="sponsor" class="section light">
     <div class="container">
